@@ -1,0 +1,51 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+  <link rel="stylesheet" type="text/css" href="styles/POTD.css">
+  <link rel="stylesheet" type="text/css" href="styles/profile.css">
+  <link rel="stylesheet" type="text/css" href="styles/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="styles/login.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Muli:400,700,900|Anton" rel="stylesheet">
+</head>
+
+<body>
+  <div id="login-container"></div>
+  <div id="signup-container"></div>
+
+  <div id="parent-container">
+    <!-- sidebar for saved planet photos -->
+    <div id="sidebar">
+      <div></div>
+      <div class="fave-planet"></div>
+      <div class="sidebar-title">Favorites</div>
+      <div class="fave-planets-list" style="padding-left:unset;">
+      </div>
+    </div>
+
+    <div id="page-container">
+      <!-- planet profile -->
+      <div id="profile-container"></div>
+      <!-- planet of the day -->
+      <div id="potd-container">
+        <h3>NASA Planet Of The Day</h3>
+        <div class="potd-title"></div>
+        <div id="potd-child-container">
+        </div>
+      </div>
+      <!-- search bar for planets -->
+      <div id="planets-container">
+        <input type="text" name="input" placeholder="Search the universe..." class="search-bar">
+        <br/>
+        <input type="submit" name="search" value="search" class="search-btn">
+        <div id="search-results">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="src/login.js"></script>
+<script src="src/index.js"></script>
+<script src="src/sidebar.js"></script>
+<script src="src/profile.js"></script>
+</html>

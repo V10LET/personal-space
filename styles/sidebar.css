@@ -1,0 +1,48 @@
+/*------ SIDEBAR ------*/
+
+#sidebar {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 15%;
+  /* background-color: #753009; */
+  /* background-color: #C34F0E; */
+  /* background-color: #212121; */
+  background-color: #181818;
+  color: black;
+}
+
+.sidebar-title {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: white;
+  /* padding: 2em 0em 0em 1em; */
+}
+
+.fave-planets-list {
+  width: 100%;
+  text-align: left;
+}
+
+.list-item {
+  padding: 1em 0em;
+  margin: 1em 0em;
+  color: white;
+}
+
+button.sidebar-btn {
+  font-family: 'Muli';
+  font-weight: 500;
+  font-size: 1em;
+  border: none;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
+  color: white;
+}
+
+
+
+div.list-item:hover {
+  background-color: #753009;
+  background-color: #C34F0E;
+}

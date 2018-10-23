@@ -1,0 +1,12 @@
+/*------ PROFILE SECTION ------*/
+
+#profile-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.profile-picture {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.5);
+}

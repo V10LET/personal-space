@@ -1,0 +1,47 @@
+/*------ PARENT CONTAINER ------*/
+#parent-container {
+  display: flex;
+}
+
+/*------ SEARCH RESULTS SECTION ------*/
+
+#search-results {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-child {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+img.searched-picture {
+  /* height: 10em; */
+  border-radius: 15%;
+  padding: 1em;
+  width: 10em;
+}
+
+input.search-bar {
+  margin: 0 auto;
+  width: 450px;
+  height: 60px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  text-align: center;
+}
+
+input.search-btn {
+  width: 7em;
+  height: 2em;
+  font-size: 1em;
+  font-family: 'Muli';
+  margin-bottom: 1.5em;
+  border-radius: 5px;
+}
