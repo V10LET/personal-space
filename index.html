@@ -1,51 +1,108 @@
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="styles/index.css">
-  <link rel="stylesheet" type="text/css" href="styles/POTD.css">
-  <link rel="stylesheet" type="text/css" href="styles/profile.css">
-  <link rel="stylesheet" type="text/css" href="styles/sidebar.css">
-  <link rel="stylesheet" type="text/css" href="styles/login.css">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Muli:400,700,900|Anton" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900|Muli:400,700,900" rel="stylesheet">
 </head>
 
 <body>
-  <div id="login-container"></div>
-  <div id="signup-container"></div>
+  <!-- starting or "login" page -->
+  <div id="starting-container">
+    <div id="intro-select-box">
+      <div style="font-weight: 800; font-size: 1em;">Welcome to Personal Space</div>
+      <form class="entry-form">
+        <select id="starting-dropdown">
+          <option value="Choose" selected>Choose Your Character</option>
+        </select>
+        <button class="enter-btn">Go</button>
+      </form>
+    </div>
+  </div>
 
+  <!-- homepage -->
   <div id="parent-container">
-    <!-- sidebar for saved planet photos -->
+    <!-- sidebar -->
     <div id="sidebar">
-      <div></div>
-      <div class="fave-planet"></div>
-      <div class="sidebar-title">Favorites</div>
-      <div class="fave-planets-list" style="padding-left:unset;">
-      </div>
+      <div class="sidebar-picture"></div>
+      <div class="sidebar-intro"></div>
+      <br>
+      <button id="profile-btn"><img class="icon" src="http://www.clker.com/cliparts/y/1/E/6/r/P/man-white-icon-hi.png">My Profile</button>
+      <button id="potd-btn"><img class="icon" src="https://png.pngtree.com/svg/20161031/rocket_283768.png">Astro Of The Day</button>
+      <button id="search-btn"><img class="icon" src="https://www.the-escape-room.de/hildesheim/wp-content/uploads/sites/3/2018/04/icon-lupe-hildesheim.png">Search</button>
+      <select id="sidebar-dropdown"></select>
+
+      <button class="logout-btn" type="submit" onclick="location.reload()">Logout</button>
     </div>
 
-    <div id="page-container">
-      <!-- planet profile -->
-      <div id="profile-container"></div>
-      <!-- planet of the day -->
-      <div id="potd-container">
-        <h3>NASA Planet Of The Day</h3>
-        <div class="potd-title"></div>
-        <div id="potd-child-container">
+    <div style="display:flex; flex-direction: column; width: 85%;">
+      <div id="nav-logo"><img src="https://image.flaticon.com/icons/svg/65/65804.svg" style="height: 20px; padding-right: .5em; margin-top: -.1em;">Personal Space</div>
+
+      <!-- page with profile, potd, and search feature -->
+      <div id="page-container">
+
+        <!-- user profile -->
+        <div id="profile-container">
+          <div id="profile-edit-section">
+            <form class="profile-edit-form">
+              <label>Click To Edit Profile</label>
+              <input type="text" class="profile-input-name">
+              <br>
+              <input type="text" class="profile-input-bio">
+              <input type="text" class="profile-input-img">
+              <button class="profile-submit-btn">Submit</button>
+            </form>
+          </div>
+          <div id="profile-content-container">
+            <div class="profile-child-1">
+              <div class="profile-picture"></div>
+              <div style="padding-top: 0.5em;"><span class="profile-name"></span><img class="profile-edit-icon" src="https://image.flaticon.com/icons/svg/69/69455.svg"></div>
+              <div class="profile-bio"></div>
+            </div>
+            <div class="profile-child-2">
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- search bar for planets -->
-      <div id="planets-container">
-        <input type="text" name="input" placeholder="Search the universe..." class="search-bar">
-        <br/>
-        <input type="submit" name="search" value="search" class="search-btn">
-        <div id="search-results">
+
+        <!-- planet profile -->
+        <div id="planet-container">
+          <div id="planet-content-container">
+            <div id="planet-edit-section">
+              <form class="planet-edit-form">
+                <label>Click To Edit Content</label>
+                <input type="text" class="input-name">
+                <br>
+                <textarea type="text" class="input-desc"></textarea>
+                <button class="form-submit-btn">Submit</button>
+              </form>
+            </div>
+            <div id="planet-preedit-section">
+              <span class="planet-name"></span>
+              <img class="edit-icon" src="https://image.flaticon.com/icons/svg/69/69455.svg">
+              <img class="delete-icon" src="https://image.flaticon.com/icons/svg/1175/1175054.svg">
+              <div class="planet-description"></div>
+            </div>
+            <img class="planet-picture"></img>
+          </div>
+        </div>
+
+        <!-- planet of the day -->
+        <div id="potd-container">
+          <div id="potd-parent-container">
+            <div class="potd-child-2"></div>
+            <div class="potd-child-1"><img class="potd-picture"></div>
+          </div>
+        </div>
+
+        <!-- search bar for planets -->
+        <div id="search-container">
+          <input type="text" name="input" placeholder="Search the universe..." class="search-bar">
+          <input type="submit" name="search" value="search" class="planet-search-btn">
+          <div id="search-results">
+          </div>
         </div>
       </div>
     </div>
   </div>
 
 </body>
-<script src="src/login.js"></script>
 <script src="src/index.js"></script>
-<script src="src/sidebar.js"></script>
-<script src="src/profile.js"></script>
 </html>
